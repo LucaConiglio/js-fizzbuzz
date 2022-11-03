@@ -1,0 +1,9 @@
+.mini-box{
+    background-color: aqua;
+    width: calc(100% / 8);
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1 px solid yellowgreen;
+}
