@@ -12,21 +12,22 @@ const buzz = "buzz"
 // variabile x la query selector
 const miniBox = document.querySelector(".mini-box");
 // creiamo un ciclo dando come priorità fizzbuzz e poi gli altri
-for (let i = 0; i < numBox; i++ ){
+for (let i = 1; i <= numBox; i++ ){
 let color = ""
-if (i % 3 && i % 5){
-    miniBox.innerHTML += `<div class="mini-box ${ color }"> ${fizzBuzz}`;
+if (i % 3 === 0 && i % 5 === 0){
     color = "bg-danger"
-
-} else if (i % 3) {
-    miniBox.innerHTML += `<div class="mini-box ${ color }"> ${fizz}`;
-    color = "bg-warning"
-} else if (i % 5) {
-    miniBox.innerHTML += `<div class="mini-box ${ color }"> ${buzz}`;
+    miniBox.innerHTML += `<div class="mini-boxs ${ color }"> ${fizzBuzz} </div>`;
+      
+} else if (i % 5 === 0) {
     color = "bg-success";
-}  else {
+    miniBox.innerHTML += `<div class="mini-boxs ${ color }"> ${buzz} </div>`;
+} else if (i % 3 === 0) {
+    color = "bg-warning"
+    miniBox.innerHTML += `<div class="mini-boxs ${ color }"> ${fizz} </div>`;
     
+}  else {
+    miniBox.innerHTML += `<div class="mini-boxs"> ${i} </div>`;
 }
-miniBox.innerHTML += `<div class="mini-box ${ color }"> ${i}`;
+
 
 }

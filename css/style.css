@@ -1,9 +1,13 @@
 .mini-box{
-    background-color: aqua;
-    width: calc(100% / 8);
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem;
+}
+.mini-boxs{
+    flex-basis: calc(100% / 10);
     aspect-ratio: 1/1;
+    background-color: aqua;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1 px solid yellowgreen;
 }
